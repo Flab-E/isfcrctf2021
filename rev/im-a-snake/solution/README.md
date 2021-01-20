@@ -20,12 +20,12 @@ Before we start disassembling let's look at any extra library added into the exe
 ```
 objdump -p snake
 ```
-![libraries](lips.png)  
+![libraries](libs.png)  
 
 We can see that a library ncurses was included into the executable. Ncurses is a library often used for animations and manipulations. 
 Let us now disassemble the program. I will be using radare2.  
 The initial analysis will be done by the command `a`. for deep analysis we can add more 'a' flags like this:
-![analyse](analuse.png)  
+![analyse](analyse.png)  
   
 since `aaa` is more than enough for our requirement we will be going with that.  
 to list all analysed function we can use the command `afl`:  
