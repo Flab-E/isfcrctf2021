@@ -8,13 +8,17 @@
 ### solution
 
 The challenge gives us a file called `snake` for this challenge. let's use `file` command to check what this file is  
-![file](file.png)  
-  
+```
+$ file snake
+./snake: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=1f9b40b596ee04f38768daeff442245263a4b2c8, for GNU/Linux 3.2.0, not stripped
+
+```
 An ELF 64-bit executable file which means we can execute it in the terminal.  
 The program prompts us to keep a minimum screen size of 30x30.   
   
 Executing it we see that it's a terminal based snake game, with randomly generated food. Playing the game does not do much adn does what is intended of a snake game. Hitting a wall or body reults in game over. On the top left is the direction prompt, top right is the current terminal size, bottom left current head position and bottom right is the prompt to press f2 at any moment to exit.  
 These things can be identified easily by just playing for a few seconds.  
+![file](file.png)  
   
 Before we start disassembling let's look at any extra library added into the executable with `objdump` command:
 ```
